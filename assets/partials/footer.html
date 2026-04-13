@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="container footer__row">
+    <div>
+      <p class="footer__title">{{businessName}}</p>
+      <p class="footer__meta">
+        {{addressLine}} •
+        <a class="footer__link" href="tel:{{phoneRaw}}">{{phoneDisplay}}</a> •
+        <a class="footer__link" href="mailto:{{email}}">{{email}}</a>
+      </p>
+    </div>
+
+    <div class="footer__actions">
+      <a class="btn btn--tan btn--sm" href="{{primaryCtaHref}}">{{primaryCtaText}}</a>
+      <a class="btn btn--light btn--sm" href="tel:{{phoneRaw}}">{{phoneDisplay}}</a>
+    </div>
+
+    <p class="footer__copy">© <span data-year></span> {{businessName}}</p>
+  </div>
+</footer>
