@@ -1,13 +1,13 @@
 // assets/scripts/config.js
 window.SITE_CONFIG = {
-  businessName: "Workshop Name",
+  businessName: "Christian G. Derstine Furniture Maker",
   slogan: "Built custom in our local workshop.",
-  phoneDisplay: "(123) 456-7890",
-  phoneRaw: "1234567890",
-  email: "hello@workshop.com",
-  addressLine: "123 Workshop St., Town, ST 12845",
+  phoneDisplay: "(215) 538-0952",
+  phoneRaw: "2155380952",
+  email: "christian@derstine.com",
+  addressLine: "2700 Old Bethlehem Pike, Sellersville, PA 18960",
   instagramUrl: "https://instagram.com/",
-  facebookUrl: "https://facebook.com/",
+  facebookUrl: "https://www.facebook.com/profile.php?id=100057555965494#",
   primaryCtaText: "Request a Quote",
   primaryCtaHref: "contact.html",
 
