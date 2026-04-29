@@ -1,19 +1,55 @@
 <footer class="site-footer">
-  <div class="container footer__row">
-    <div>
-      <p class="footer__title">{{businessName}}</p>
-      <p class="footer__meta">
-        {{addressLine}} •
-        <a class="footer__link" href="tel:{{phoneRaw}}">{{phoneDisplay}}</a> •
-        <a class="footer__link" href="mailto:{{email}}">{{email}}</a>
-      </p>
-    </div>
+  <div class="footer-content">
+    <div class="container-lg footer__grid">
+      <div class="footer__section">
+        <h3 class="footer__section-title">Local Craftsmanship.<br>Personalized Service.</h3>
+        <p class="footer__section-text">Proudly serving Lancaster County and surrounding areas with custom woodworking and refinishing solutions backed by decades of experience and care.</p>
+      </div>
+      
+      <div class="footer__section">
+        <div class="footer__features">
+          <div class="footer__feature">
+            <svg class="footer__feature-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <div>
+              <p class="footer__feature-title">30+ Years of Experience</p>
+              <p class="footer__feature-sub">Quality Materials</p>
+              <p class="footer__feature-sub">Built to Last</p>
+            </div>
+          </div>
+          <div class="footer__feature">
+            <svg class="footer__feature-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <div>
+              <p class="footer__feature-title">Custom Solutions</p>
+              <p class="footer__feature-sub">Made for You</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div class="footer__actions">
-      <a class="btn btn--tan btn--sm" href="{{primaryCtaHref}}">{{primaryCtaText}}</a>
-      <a class="btn btn--light btn--sm" href="tel:{{phoneRaw}}">{{phoneDisplay}}</a>
     </div>
-
-    <p class="footer__copy">© <span data-year></span> {{businessName}}</p>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-lg footer__bottom-row">
+      <div class="footer__logo-info">
+        <img class="footer__logo" src="assets/images/derstinelogo.png" alt="Christian G. Derstine Furniture Maker">
+        <p class="footer__contact">© 2026 Derstine. All Rights Reserved.</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://facebook.com" class="footer__social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" class="footer__social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6S0 4.88 0 3.5 1.12 1 2.49 1 4.98 2.12 4.98 3.5zM0 8.5h4.98V24H0V8.5zm7.52 0H12.5v2.13h.07c.7-1.33 2.4-2.73 4.95-2.73 5.29 0 6.27 3.48 6.27 8.02V24h-4.98v-7.64c0-1.82-.03-4.17-2.55-4.17-2.55 0-2.94 1.99-2.94 4.04V24H7.52V8.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
