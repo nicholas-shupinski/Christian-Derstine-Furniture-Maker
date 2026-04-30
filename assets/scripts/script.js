@@ -100,10 +100,66 @@ function wireHeaderScroll() {
   window.addEventListener("scroll", updateHeaderScrollState, { passive: true });
 }
 
+function wireTestimonials() {
+  const slider = document.querySelector(".testimonial-slider");
+  if (!slider) return;
+
+  const track = slider.querySelector(".testimonial-track");
+  const testimonials = Array.from(slider.querySelectorAll(".testimonial"));
+  const prevBtn = slider.querySelector(".testimonial-btn--prev");
+  const nextBtn = slider.querySelector(".testimonial-btn--next");
+  const dots = Array.from(slider.querySelectorAll(".testimonial-dot"));
+  let currentIndex = 0;
+  let slideWidth = slider.clientWidth;
+
+  function updateDimensions() {
+    slideWidth = slider.clientWidth;
+    track.style.width = `${slideWidth * testimonials.length}px`;
+    testimonials.forEach((testimonial) => {
+      testimonial.style.width = `${slideWidth}px`;
+      testimonial.style.minWidth = `${slideWidth}px`;
+      testimonial.style.maxWidth = `${slideWidth}px`;
+    });
+    updateSlider(currentIndex, false);
+  }
+
+  function updateSlider(index, animate = true) {
+    const clamped = (index + testimonials.length) % testimonials.length;
+    currentIndex = clamped;
+    if (!animate) {
+      track.style.transition = "none";
+    }
+    track.style.transform = `translateX(${-clamped * slideWidth}px)`;
+    if (!animate) {
+      requestAnimationFrame(() => {
+        track.style.transition = "transform 280ms ease";
+      });
+    }
+    testimonials.forEach((testimonial, idx) => {
+      testimonial.classList.toggle("is-active", idx === clamped);
+    });
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("is-active", idx === clamped);
+    });
+  }
+
+  prevBtn?.addEventListener("click", () => updateSlider(currentIndex - 1));
+  nextBtn?.addEventListener("click", () => updateSlider(currentIndex + 1));
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      updateSlider(Number(dot.dataset.slide || 0));
+    });
+  });
+
+  window.addEventListener("resize", updateDimensions);
+  updateDimensions();
+}
+
 (async function init() {
   applySeo();
   await includePartials();
   applyYear();
   wireNav();
   wireHeaderScroll();
+  wireTestimonials();
 })();
