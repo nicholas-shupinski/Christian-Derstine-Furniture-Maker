@@ -1,86 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact — Business Name</title>
-    <meta name="description" content="Contact Business Name for a quote." />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html">
-          <span class="brand__mark"></span>
-          <span class="brand__text">Business Name</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="services.html">Services</a>
-          <a class="nav__link" href="gallery.html">Work</a>
-          <a class="nav__link" href="about.html">About</a>
-          <a class="nav__link nav__link--active" href="contact.html">Contact</a>
-        </nav>
-
-        <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
-          Menu
-        </button>
-      </div>
-    </header>
-
-    <main class="section section--cta">
-      <div class="container cta">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h1 class="h1">Request a quote</h1>
-          <p class="lead max-w-prose">
-            Share your goals, dimensions, timeline, and any inspiration links/photos.
-          </p>
-          <p class="muted mt-2">
-            Or call: <a class="link" href="tel:+11234567890">(123) 456-7890</a>
-          </p>
-        </div>
-
-        <form class="form" action="#" method="post">
-          <div class="form__row">
-            <label class="field">
-              <span>Name</span>
-              <input name="name" type="text" autocomplete="name" required />
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-          </div>
-
-          <label class="field">
-            <span>Message</span>
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-
-          <div class="form__actions">
-            <button class="btn btn--primary" type="submit">Send</button>
-            <a class="btn btn--outline" href="tel:+11234567890">Call</a>
-          </div>
-        </form>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <div>
-          <p class="footer-title">Business Name</p>
-          <p class="muted text-sm">© <span id="year"></span></p>
-        </div>
-        <div class="footer-actions">
-          <a class="btn btn--outline btn--sm" href="services.html">Services</a>
-          <a class="btn btn--outline btn--sm" href="gallery.html">Work</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/scripts/script.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Quote | Christian G. Derstine</title>
+<meta name="description" content="Contact Christian G. Derstine to discuss custom cabinetry or cabinet refinishing.">
+<link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body class="inner-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-include="assets/partials/header.html">
+</header>
+<main id="main">
+<section class="section contact-intro">
+<div class="container contact-grid">
+<div>
+<p class="eyebrow">Request a quote</p>
+<h1 class="h1">Let’s talk about<br>your space.</h1>
+<p class="intro-copy">A new kitchen, a better place for everyday things, or a fresh look for the cabinets you already love. Tell Chris what you’re imagining.</p>
+<div class="contact-links">
+<span>Email Chris</span>
+<a href="mailto:christian@derstine.com?subject=Cabinetry%20project%20inquiry">christian@derstine.com ↗</a>
+<span>Prefer to call?</span>
+<a href="tel:+12155380952">(215) 538-0952</a>
+</div>
+<p data-service-area hidden>
+</p>
+<!-- Service area intentionally blank. Set SITE_CONFIG.serviceArea when confirmed. -->
+</div>
+<aside class="inquiry-guide">
+<p class="eyebrow">A helpful first email</p>
+<h2 class="h2">Start with the basics.</h2>
+<p>You don’t need a finished plan. Share what you know, and we can take it from there.</p>
+<ul>
+<li>Custom cabinetry or cabinet refinishing</li>
+<li>Your town and a brief description of the space</li>
+<li>A few photos and any approximate dimensions</li>
+<li>Ideas, inspiration, or finishes you like</li>
+<li>Your hoped-for timing and budget, if known</li>
+</ul>
+<a class="btn btn--primary" href="mailto:christian@derstine.com?subject=Cabinetry%20project%20inquiry">EMAIL YOUR PROJECT DETAILS →</a>
+<p class="contact-note">Opens your email app so you can attach photos.</p>
+</aside>
+</div>
+</section>
+</main>
+<div data-include="assets/partials/footer.html">
+</div>
+<script src="assets/scripts/config.js">
+</script>
+<script src="assets/scripts/script.js">
+</script>
+</body>
 </html>

@@ -1,64 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work — Business Name</title>
-    <meta name="description" content="Recent work and projects." />
-    <link rel="stylesheet" href="assets/styles/styles.css" />
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html">
-          <span class="brand__mark"></span>
-          <span class="brand__text">Business Name</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="services.html">Services</a>
-          <a class="nav__link nav__link--active" href="gallery.html">Work</a>
-          <a class="nav__link" href="about.html">About</a>
-          <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
-        </nav>
-
-        <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
-          Menu
-        </button>
-      </div>
-    </header>
-
-    <main class="section">
-      <div class="container">
-        <p class="eyebrow">Work</p>
-        <h1 class="h1">Recent projects</h1>
-        <p class="lead max-w-prose">Swap images and captions per client.</p>
-
-        <div class="gallery">
-          <img src="assets/images/g1.jpg" alt="Project photo 1" loading="lazy" />
-          <img src="assets/images/g2.jpg" alt="Project photo 2" loading="lazy" />
-          <img src="assets/images/g3.jpg" alt="Project photo 3" loading="lazy" />
-          <img src="assets/images/g4.jpg" alt="Project photo 4" loading="lazy" />
-          <img src="assets/images/g5.jpg" alt="Project photo 5" loading="lazy" />
-          <img src="assets/images/g6.jpg" alt="Project photo 6" loading="lazy" />
-        </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <div>
-          <p class="footer-title">Business Name</p>
-          <p class="muted text-sm">© <span id="year"></span></p>
-        </div>
-        <div class="footer-actions">
-          <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/scripts/script.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio | Christian G. Derstine</title>
+<meta name="description" content="Explore cabinetry and refinishing design inspiration while our project photography is being prepared.">
+<link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body class="inner-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-include="assets/partials/header.html">
+</header>
+<main id="main">
+<section class="section portfolio-intro">
+<div class="container">
+<p class="eyebrow">Portfolio</p>
+<h1 class="h1">The details make<br>the difference.</h1>
+<p class="intro-copy">Kitchens, vanities, built-ins, and fresh finishes. Explore ideas for a home that feels considered from corner to corner.</p>
+<p class="image-notice">Project photography is being prepared. The images below are stock references for design inspiration, not completed Derstine projects.</p>
+</div>
+</section>
+<section class="section portfolio-section">
+<div class="container project-grid">
+<figure class="project-card">
+<img src="assets/images/full-kitchen.jpg" alt="Kitchens design inspiration" loading="lazy">
+<figcaption>
+<p class="eyebrow">Kitchens</p>
+<h2>Room to gather</h2>
+<p>Cabinetry inspiration for the heart of the home.</p>
+</figcaption>
+</figure>
+<figure class="project-card">
+<img src="assets/images/bathroom-cabinets-02.jpg" alt="Vanities design inspiration" loading="lazy">
+<figcaption>
+<p class="eyebrow">Vanities</p>
+<h2>Everyday, thoughtfully arranged</h2>
+<p>Bathroom storage with a considered place for daily essentials.</p>
+</figcaption>
+</figure>
+<figure class="project-card">
+<img src="assets/images/piano.jpg" alt="Built-ins design inspiration" loading="lazy">
+<figcaption>
+<p class="eyebrow">Built-ins</p>
+<h2>Make the most of your space</h2>
+<p>Ideas for cabinetry that belongs in the room.</p>
+</figcaption>
+</figure>
+<figure class="project-card">
+<img src="assets/images/kitchen-03.jpg" alt="Refinishing design inspiration" loading="lazy">
+<figcaption>
+<p class="eyebrow">Refinishing</p>
+<h2>A different point of view</h2>
+<p>Finish inspiration for an updated kitchen.</p>
+</figcaption>
+</figure>
+<figure class="project-card">
+<img src="assets/images/kitchencabinets-01(1).jpg" alt="Kitchens design inspiration" loading="lazy">
+<figcaption>
+<p class="eyebrow">Kitchens</p>
+<h2>Details that pull it together</h2>
+<p>Explore the relationship between cabinetry, surfaces, and storage.</p>
+</figcaption>
+</figure>
+<figure class="project-card">
+<img src="assets/images/refinishing-01(1).jpg" alt="Refinishing design inspiration" loading="lazy">
+<figcaption>
+<p class="eyebrow">Refinishing</p>
+<h2>A fresh chapter</h2>
+<p>A starting point for conversations about color and finish.</p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="section project-cta">
+<div class="container">
+<p class="eyebrow">Made for your home</p>
+<h2 class="h2">Have a space in mind?</h2>
+<p>Tell Chris what you have in mind. A few photos and a little context are a great place to start.</p>
+<a class="btn btn--primary" href="contact.html">START A CONVERSATION →</a>
+</div>
+</section>
+</main>
+<div data-include="assets/partials/footer.html">
+</div>
+<script src="assets/scripts/config.js">
+</script>
+<script src="assets/scripts/script.js">
+</script>
+</body>
 </html>

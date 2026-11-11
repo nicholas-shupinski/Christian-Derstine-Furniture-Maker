@@ -11,7 +11,7 @@ function applySeo() {
   const pageKey = getCurrentPageKey();
   const page = (cfg.pages && cfg.pages[pageKey]) || {};
 
-  document.title = page.title || cfg.businessName || "Website";
+  if (page.title) document.title = page.title;
 
   const desc = page.description || "";
   if (desc) {
@@ -73,13 +73,22 @@ function wireNav() {
   if (!toggle || !panel) return;
 
   toggle.addEventListener("click", () => {
-    panel.classList.toggle("is-open");
+    const open = panel.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
   });
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && panel.classList.contains("is-open")) {
+      panel.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    }
+  });
   panel.addEventListener("click", (e) => {
     const t = e.target;
     if (t && t.matches("a")) {
       panel.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
     }
   });
 }
@@ -159,6 +168,13 @@ function wireTestimonials() {
   applySeo();
   await includePartials();
   applyYear();
+  document.querySelectorAll("[data-service-area]").forEach(el => {
+    el.textContent = cfg.serviceArea || "";
+    el.hidden = !cfg.serviceArea;
+  });
+  document.querySelectorAll(".nav__link, .nav-panel__link").forEach(link => {
+    if (link.getAttribute("href") === getCurrentPageKey()) link.setAttribute("aria-current", "page");
+  });
   wireNav();
   wireHeaderScroll();
   wireTestimonials();
