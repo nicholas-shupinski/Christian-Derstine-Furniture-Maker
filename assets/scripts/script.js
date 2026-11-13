@@ -72,25 +72,25 @@ function wireNav() {
   const panel = document.querySelector(".nav-panel");
   if (!toggle || !panel) return;
 
-  toggle.addEventListener("click", () => {
-    const open = panel.classList.toggle("is-open");
+  function setOpen(open) {
+    panel.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
-  });
-
-  document.addEventListener("keydown", (event) => {
+    toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+  }
+  toggle.addEventListener("click", () => setOpen(!panel.classList.contains("is-open")));
+  document.addEventListener("keydown", event => {
     if (event.key === "Escape" && panel.classList.contains("is-open")) {
-      panel.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
+      setOpen(false);
       toggle.focus();
     }
   });
-  panel.addEventListener("click", (e) => {
-    const t = e.target;
-    if (t && t.matches("a")) {
-      panel.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-    }
+  panel.addEventListener("click", event => {
+    if (event.target.closest("a")) setOpen(false);
   });
+  document.addEventListener("click", event => {
+    if (!panel.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
+  });
+  window.matchMedia("(max-width: 860px)").addEventListener("change", () => setOpen(false));
 }
 
 function wireHeaderScroll() {
